@@ -7,6 +7,10 @@
   <%= f.text_field :artist_name %>
   <%= f.label :genre %>
   <%= f.collection_select :genre_id, Genre.all, :id, :name %>
+  <%= f.label :notes %>
+  <%= f.text_field :note_ids_1 %>
+  <%= f.label :notes %>
+  <%= f.text_field :note_ids_2 %>
 
   <br />
 
