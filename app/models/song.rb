@@ -21,6 +21,11 @@ class Song < ActiveRecord::Base
     self.genre ? self.genre.name : nil
   end
 
-
+  def note_contents=(notes_array)
+     notes_array.each do |content|
+       note = Note.new(content)
+       self.notes << note
+     end
+   end
   # add associations here
 end
