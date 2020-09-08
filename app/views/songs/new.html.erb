@@ -1,6 +1,7 @@
 <h1>Create a Song</h1>
 
 <%= form_for @song  do |f| %>
+  <%= f.collection_select :artist_name, Artist.all, :name, :name %>
   <%= f.label :title %>
   <%= f.text_field :title %>
   <br />
